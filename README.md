@@ -1,8 +1,8 @@
 # Overview
-Our project includes four parts: main model, data association method, optical flow model, and shadow detection model.
+This is the implementation of the BoxMOTS work. This project includes four parts: main model, data association method, optical flow model, and shadow detection model.
 
 ## Main Model
-Main model generates detection, segmentation, and object embedding results.
+Main model generates detection, segmentation, and object embedding results. This part is contained in the [boxmots](boxmots) folder.
 
 ## Data Association Method
 We use [DeepSORT](https://github.com/dyhBUPT/StrongSORT) for data association, based on both motion and appearance information.
