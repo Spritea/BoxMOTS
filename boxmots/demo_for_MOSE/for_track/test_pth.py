@@ -1,0 +1,7 @@
+import torch
+
+# file_name="../training_dir/COCO_pretrain/CondInst_MS_R_50_1x_kitti_mots/inference/instances_predictions.pth"
+file_name="../../training_dir_hddd/reid_one_class_infer_pair_warp_right_track_reid_eval_in_train/COCO_pretrain_strong/search_for_loss_combination/long_epoch_seq_shuffle_fl_2_lr_0_0001_bs_4_eval_40_steps_4k_no_color_sim_pretrain_weights_v3/BoxInst_MS_R_50_1x_kitti_mots/model_0002839.pth"
+a=torch.load(file_name)
+print('kk')
+

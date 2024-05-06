@@ -1,0 +1,51 @@
+_BASE_: "Base-BoxInst_ReID_One_Class_Infer_BDD_Pair_Warp_ReID_Eval_In_Train.yaml"
+MODEL:
+  # WEIGHTS: "detectron2://ImageNetPretrained/MSRA/R-50.pkl"
+  WEIGHTS: "checkpoints/BoxInst_MS_R_50_3x.pth"
+  RESNETS:
+    DEPTH: 50
+  # below for reid feat dim.
+  CONDINSTREID:
+    REID_BRANCH_OUT_CHANNELS: 32
+#OUTPUT_DIR: "output/condinst_MS_R_50_1x"
+  BOXINST:
+    USE_COLOR_SIMILARITY: False
+  ROI_HEADS:
+    NUM_CLASSES: 7
+  SEM_SEG_HEAD:
+    NUM_CLASSES: 7
+  BASIS_MODULE:
+    NUM_CLASSES: 7
+  FCOS:
+    NUM_CLASSES: 7
+  # RETINANET:
+  #   NUM_CLASSES: 2
+OUTPUT_DIR: "training_dir/ReID/COCO_pretrain/CondInst_MS_R_50_1x_kitti_mots"
+
+DATALOADER:
+  # use my training sampler.
+  SAMPLER_TRAIN: "TrainingSamplerSeqShuffle"
+  # set the number of continuous frames.
+  FRAME_LINK: 2
+DATASETS:
+  # TRAIN: ("coco_2017_train",)
+  # TEST: ("coco_2017_val",)
+  TRAIN: ("bdd_mots_train_no_class_train",)
+  TEST: ("bdd_mots_val_no_class_train",)
+SOLVER:
+  #IMS_PER_BATCH: 16
+  #BASE_LR: 0.01
+  #STEPS: (60000, 80000)
+  #MAX_ITER: 90000
+  #2 imgs per gpu.
+  #here IMS_PER_BATCH is the total batch_size including all gpus.
+  # BoxInst takes more gpu memory than CondInst.
+  IMS_PER_BATCH: 4
+  BASE_LR: 0.001
+  STEPS: []
+  # MAX_ITER: 7000
+  MAX_ITER: 21000
+  # below for multi evaluation
+  CHECKPOINT_PERIOD: 40
+TEST:
+  EVAL_PERIOD: 40

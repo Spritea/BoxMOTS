@@ -1,0 +1,94 @@
+# output dir
+output
+instant_test_output
+inference_test_output
+
+
+*.jpg
+*.png
+# *.txt
+
+# compilation and distribution
+__pycache__
+_ext
+*.pyc
+*.so
+AdelaiDet.egg-info/
+build/
+dist/
+
+# pytorch/python/numpy formats
+*.pth
+*.pkl
+*.npy
+
+# ipython/jupyter notebooks
+#*.ipynb
+**/.ipynb_checkpoints/
+
+# Editor temporaries
+*.swn
+*.swo
+*.swp
+*~
+
+# Pycharm editor settings
+.idea
+# .vscode
+.python-version
+
+# project dirs
+/datasets/coco
+/datasets/lvis
+/datasets/pic
+/datasets/ytvos
+/models
+/demo_outputs
+/example_inputs
+/debug
+/weights
+/export
+eval.sh
+
+demo/performance.py
+demo/demo2.py
+train.sh
+benchmark.sh
+script
+
+# by cws.
+my_dataset/
+checkpoints/
+training_dir
+training_dir/
+my_opt_flow_results
+my_opt_flow_results/
+my_shadow_det/
+training_dir_hddd
+training_dir_hdda
+training_dir_hddb
+my_opt_flow_results_hdda
+my_optical_flow_with_gauss_noise_hdda
+training_dir_flow_noise
+training_dir_flow_noise_hddc
+my_optical_flow_with_constant_noise
+training_dir_flow_constant_noise/
+demo_for_MOSE/samples
+demo_for_MOSE/test_out
+training_dir_flow_noise_home
+demo_for_MOSE/for_track/test_data
+demo_for_MOSE/data_out
+demo_for_MOSE/data_out_no_pair_warp
+demo_for_MOSE/MOSE_car_seq
+demo_for_MOSE/MOSE_car_seq_out_no_pair_warp
+demo_for_MOSE/MOSE_car_seq_out_pair_warp
+
+training_dir_ytvis_2019
+my_optical_flow_results_ytvis_2019
+demo_for_ytvis_2019/youtube_vis_2019_out_no_pair_warp
+demo_for_ytvis_2019/use_kitti_pretrain_model
+demo_for_ytvis_2019/use_kitti_pretrain_model_selected_videos
+
+demo_for_ytvis_2019/youtube_vis_2019_out_pair_warp
+demo_for_ytvis_2019/debug_only
+demo_for_ytvis_2019/debug_only_kitti_pretrain

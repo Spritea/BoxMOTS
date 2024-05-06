@@ -1,0 +1,4 @@
+since server 4 is down (Sep.8th.2022), and can't getthe original boxinst result (box ap:68.834,mask ap:44.529),
+so I pick one on server-a100 with similar det/seg performance with box ap:68.87,mask ap:44.8 (car:0.601,ped:0.295),iter:3999.
+the json result is from:
+training_dir/reid_one_class_infer_pair_warp/COCO_pretrain_strong/search_for_loss_combination/long_epoch_seq_shuffle_fl_2_lr_0_0001_bs_4_eval_500_no_color_sim_pairwarp_factor_0_01_steps_4k/BoxInst_MS_R_50_1x_kitti_mots

@@ -1,0 +1,9 @@
+cocoeval.py
+/home/wensheng/anaconda3/envs/adelaidet/lib/python3.8/site-packages/pycocotools/cocoeval.py
+1.Only change line 429 from:
+iStr = ' {:<18} {} @[ IoU={:<9} | area={:>6s} | maxDets={:>3d} ] = {:0.3f}'
+to:
+iStr = ' {:<18} {} @[ IoU={:<9} | area={:>6s} | maxDets={:>3d} ] = {:0.5f}'
+to get more digits.
+2.Note that for numpy>=1.24.0, np.float will generate error.
+So pycocotools>=2.0.6 changes np.float to float on line 378-379.

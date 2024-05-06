@@ -1,0 +1,39 @@
+_BASE_: "Base-CondInst_ReID_One_Class_Eval.yaml"
+MODEL:
+  # WEIGHTS: "detectron2://ImageNetPretrained/MSRA/R-50.pkl"
+  WEIGHTS: "checkpoints/CondInst_MS_R_50_1x.pth"
+  RESNETS:
+    DEPTH: 50
+  # below for reid feat dim.
+  CONDINSTREID:
+    REID_BRANCH_OUT_CHANNELS: 32
+#OUTPUT_DIR: "output/condinst_MS_R_50_1x"
+  ROI_HEADS:
+    NUM_CLASSES: 2
+  SEM_SEG_HEAD:
+    NUM_CLASSES: 2
+  BASIS_MODULE:
+    NUM_CLASSES: 2
+  FCOS:
+    NUM_CLASSES: 2
+  # RETINANET:
+  #   NUM_CLASSES: 2
+OUTPUT_DIR: "training_dir/ReID/COCO_pretrain/CondInst_MS_R_50_1x_kitti_mots"
+
+DATASETS:
+  # TRAIN: ("coco_2017_train",)
+  # TEST: ("coco_2017_val",)
+  TRAIN: ("kitti_mots_train_in_trainval",)
+  TEST: ("kitti_mots_val_in_trainval",)
+SOLVER:
+  #IMS_PER_BATCH: 16
+  #BASE_LR: 0.01
+  #STEPS: (60000, 80000)
+  #MAX_ITER: 90000
+  #2 imgs per gpu.
+  #here IMS_PER_BATCH is the total batch_size including all gpus.
+  IMS_PER_BATCH: 8
+  BASE_LR: 0.005
+  STEPS: []
+  MAX_ITER: 7000
+

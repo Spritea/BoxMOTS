@@ -1,0 +1,14 @@
+__init__.py
+/home/wensheng/anaconda3/envs/adelaidet/lib/python3.8/site-packages/detectron2/data/samplers/__init__.py
+build.py
+/home/wensheng/anaconda3/envs/adelaidet/lib/python3.8/site-packages/detectron2/data/build.py
+coco.py
+/home/wensheng/anaconda3/envs/adelaidet/lib/python3.8/site-packages/detectron2/data/datasets/coco.py
+distributed_sampler.py
+/home/wensheng/anaconda3/envs/adelaidet/lib/python3.8/site-packages/detectron2/data/samplers/distributed_sampler.py
+init_for_data.py
+/home/wensheng/anaconda3/envs/adelaidet/lib/python3.8/site-packages/detectron2/data/__init__.py
+detection_utils.py
+/home/wensheng/anaconda3/envs/adelaidet/lib/python3.8/site-packages/detectron2/data/detection_utils.py
+init_for_datasets.py
+/home/wensheng/anaconda3/envs/adelaidet/lib/python3.8/site-packages/detectron2/data/datasets/__init__.py

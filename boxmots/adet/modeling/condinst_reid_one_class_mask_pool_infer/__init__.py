@@ -1,0 +1,1 @@
+from .condinst_reid_one_class_mask_pool_infer import CondInst_ReID_One_Class_Mask_Pool_Infer

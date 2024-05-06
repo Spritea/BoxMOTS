@@ -1,0 +1,1 @@
+from .fcos_reid_one_class_infer import FCOS_ReID_One_Class_Infer

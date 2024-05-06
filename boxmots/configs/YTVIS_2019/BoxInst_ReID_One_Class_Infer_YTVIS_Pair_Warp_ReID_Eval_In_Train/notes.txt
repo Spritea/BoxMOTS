@@ -1,0 +1,9 @@
+1.MS_R_50_1x_ytvis_2019_coco_pretrain_strong_iter_90k_seq_shuffle_fl_2_lr_0_001_bs_8_eval_500_no_color_sim_pretrain_weights.yaml
+is based on:
+configs/BDD_DATA/BoxInst_ReID_One_Class_Infer_BDD_Pair_Warp_ReID_Eval_In_Train/MS_R_50_1x_bdd_mots_coco_pretrain_strong_iter_21k_seq_shuffle_fl_2_lr_0_001_bs_4_eval_40_no_color_sim_pretrain_weights.yaml
+2.must use the CondInst_ReID_One_Class_Infer_BDD_Pair_Warp_ReID_Eval_In_Train class,
+because videos in YTVIS 2019 do not have the same resolution, which needs extra process.
+The extra process has been done for BDD100k MOTS dataset,
+since BDD100K MOTS dataset does not have the same resolution for all videos either.
+3.train our model with optical flow with less iterations and smaller batch size,
+because every 20 iters with bs=4 take about 1 min, much slower than the one without optical flow.
