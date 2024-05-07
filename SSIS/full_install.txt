@@ -1,0 +1,24 @@
+SSIS安装说明
+git clone我自己的仓库，因为pytorch=1.8.1要用老版本的
+adet/layers/csrc/ml_nms/ml_nms.cu，
+这个是adelaidet的问题，SSIS作者的issue里有人问到
+不换的话需要pytorch=1.11+，但这个要cuda 11.3,
+我们机子用的是cuda 11.1.
+1.建python=3.8.13环境
+2.pip install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html
+必须pytorch=1.8.1,为了kornia=0.6.7
+或者pytorch=1.8.0搭配kornia=0.5.6(这是作者更新的requirement.txt，但我还没试过)
+必须pip安装,conda安装会一直solving environment.
+3.装pytorch 1.8+cuda 11.1的detectron2.
+python -m pip install detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu111/torch1.8/index.html
+4.pip install numpy==1.23.2
+5.装老版本pillow，因为bilinear参数在新版本中没了
+pip install pillow==9.2.0
+6.pip install scikit-image==0.19.3
+7.pip install kornia==0.6.7
+8.pip install pycocotools
+9.pip install git+https://github.com/stevewongv/InstanceShadowDetection.git@50764eb336f3194db382054fe537956dd8449c01#subdirectory=PythonAPI
+10.cd SSIS+python setup.py build develop
+11.pip install opencv-python为了demo.py
+
+

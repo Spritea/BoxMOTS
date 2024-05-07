@@ -1,0 +1,73 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "My Python Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "cwd": "${fileDirname}",
+            "justMyCode": false,
+        },
+        {
+            "name": "demo debug",
+            "type": "python",
+            "request": "launch",
+            "program": "demo_my_data.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            // vscode bug:
+            // need to first run debug without cwd,
+            // and then run debug with cwd.
+            "cwd": "${workspaceFolder}/demo",
+            "env": {"CUDA_VISIBLE_DEVICES":"0"},
+            "args": ["--input","../../my_dataset/KITTI_MOTS/imgs/val_in_trainval/"]
+        },
+        {
+            "name": "demo out assc debug",
+            "type": "python",
+            "request": "launch",
+            "program": "demo_my_data_out_assc.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            // vscode bug:
+            // need to first run debug without cwd,
+            // and then run debug with cwd.
+            "cwd": "${workspaceFolder}/demo",
+            "env": {"CUDA_VISIBLE_DEVICES":"0"},
+            "args": ["--input","../../my_dataset/KITTI_MOTS/imgs/train_in_trainval/"]
+        },
+        {
+            "name": "demo bdd debug",
+            "type": "python",
+            "request": "launch",
+            "program": "demo_my_data_bdd.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            // vscode bug:
+            // need to first run debug without cwd,
+            // and then run debug with cwd.
+            "cwd": "${workspaceFolder}/demo",
+            "env": {"CUDA_VISIBLE_DEVICES":"0"},
+            "args": ["--input","../../my_dataset/bdd100k/images/seg_track_20/val/"]
+        },
+        {
+            "name": "demo only shadow debug",
+            "type": "python",
+            "request": "launch",
+            "program": "demo_my_data_only_draw_shadow.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            // vscode bug:
+            // need to first run debug without cwd,
+            // and then run debug with cwd.
+            "cwd": "${workspaceFolder}/demo",
+            "env": {"CUDA_VISIBLE_DEVICES":"0"},
+            "args": ["--input","../../my_dataset/KITTI_MOTS/imgs/val_in_trainval/"]
+        },
+    ]
+}

@@ -1,0 +1,10 @@
+1.Files in the folder my_code_for_add_noise_to_shadow_det is to
+add noise to shadow det result and combine it with the boxmots result.
+2.The file my_code_for_add_noise_to_shadow_det/my_shadow_det/my_shadow_result/my_json_result/kitti_mots_val/shadow_instance_result.json
+is copied from a100-server: 
+/home/wensheng/code/AdelaiDet/my_shadow_det/my_shadow_result/my_json_result/kitti_mots_val/shadow_instance_result.json
+3.The file my_code_for_add_noise_to_shadow_det/my_shadow_det/original_boxinst_result/reid_one_class_infer_pair_warp_right_track_reid_eval_in_train/long_epoch_seq_shuffle_fl_2_lr_0_0001_bs_4_eval_40_ckpt_500_steps_4k/inference/iter_0002839/coco_instances_results.json
+is copied from a100-server:
+/home/wensheng/code/AdelaiDet/my_shadow_det/original_boxinst_result/reid_one_class_infer_pair_warp_right_track_reid_eval_in_train/long_epoch_seq_shuffle_fl_2_lr_0_0001_bs_4_eval_40_ckpt_500_steps_4k/inference/iter_0002839/coco_instances_results.json
+
+

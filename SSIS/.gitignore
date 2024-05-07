@@ -1,0 +1,60 @@
+# output dir
+instant_test_output
+inference_test_output
+
+# compilation and distribution
+__pycache__
+_ext
+*.pyc
+*.so
+AdelaiDet.egg-info/
+build/
+dist/ 
+
+# pytorch/python/numpy formats
+*.pth
+*.pkl
+*.npy
+
+# ipython/jupyter notebooks
+*.ipynb
+**/.ipynb_checkpoints/
+
+# Editor temporaries
+*.swn
+*.swo
+*.swp
+*~
+
+# Pycharm editor settings
+.idea
+# .vscode
+.python-version
+
+# project dirs
+/datasets/coco
+/datasets/lvis
+/datasets/cityscapes
+/models
+/debug
+/weights
+eval.sh
+
+*.DS_Store
+
+# below by cws
+AdelaiDet_ssis.egg-info/
+*.jpg
+*.png
+*.zip
+*.tar.gz
+my_code_for_add_noise_to_shadow_det/my_shadow_det
+my_code_for_perform_track_on_noisy_shadow_filter_result/for_tracking
+my_code_for_evaluation/my_dataset
+my_dataset_for_MOSE
+demo/my_json_result_MOSE
+demo/my_vis_result_MOSE
+my_code_for_MOSE_shadow_combine/my_infer_result_MOSE
+my_code_for_MOSE_shadow_combine/filter_result_MOSE
+my_code_for_MOSE_track_on_shadow_filter_result/for_tracking_MOSE
+my_dataset

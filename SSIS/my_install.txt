@@ -1,0 +1,3 @@
+the current adet/layers/csrc/ml_nms/ml_nms.cu is for pytorch>=1.11,
+when use pytorch<1.11, like pytorch=1.10, need to change ml_nms.cu back to old one,
+the old one is in the history commit of the SSIS repo, with commid id:9a6d934.
