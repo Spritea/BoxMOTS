@@ -1,0 +1,15 @@
+*__pycache__
+.idea
+results
+# below by cws
+/imgs
+/my_test_imgs
+/my_data
+/my_results
+/my_results_hdda
+my_code_for_add_noise_to_optical_flow/test_img_one_with_gauss_noise
+my_code_for_add_noise_to_optical_flow/optical_flow_with_gauss_noise_hdda
+my_code_for_add_noise_to_optical_flow/optical_flow_with_gauss_noise
+my_code_for_add_noise_to_optical_flow/optical_flow_with_constant_noise
+
+/my_results_server_apple

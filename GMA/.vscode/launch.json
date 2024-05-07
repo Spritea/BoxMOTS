@@ -1,0 +1,61 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "My Python Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "cwd": "${fileDirname}",
+            "justMyCode": false,
+        },
+        {
+            "name": "my eval and save",
+            "type": "python",
+            "request": "launch",
+            "program": "my_eval_and_save.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {"CUDA_VISIBLE_DEVICES":"0"},
+            "args": ["--model", "checkpoints/gma-kitti.pth",
+            "--path","my_data/KITTI_MOTS/imgs/train_in_trainval/"]
+        },
+        {
+            "name": "my eval and save bidirect bdd",
+            "type": "python",
+            "request": "launch",
+            "program": "my_eval_and_save_bidirect_bdd.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {"CUDA_VISIBLE_DEVICES":"0"},
+            "args": ["--model", "checkpoints/gma-sintel.pth",
+            "--path","my_data/bdd100k/images/seg_track_20/train/"]
+        },
+        {
+            "name": "my eval and save bidirect bdd parallel",
+            "type": "python",
+            "request": "launch",
+            "program": "my_eval_and_save_bidirect_bdd_parallel.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {"CUDA_VISIBLE_DEVICES":"0"},
+            "args": ["--model", "checkpoints/gma-sintel.pth","--part","6",
+            "--path","my_data/bdd100k/images/seg_track_20/train/"]
+        },
+        {
+            "name": "my eval and save bidirect ytvis 2019 debug",
+            "type": "python",
+            "request": "launch",
+            "program": "my_eval_and_save_bidirect_ytvis_2019.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {"CUDA_VISIBLE_DEVICES":"0"},
+            "args": ["--model", "checkpoints/gma-sintel.pth",
+            "--path","my_data/youtube_vis_2019/train/JPEGImages/"]
+        },
+    ]
+}
