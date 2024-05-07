@@ -1,0 +1,82 @@
+# output dir
+output
+instant_test_output
+inference_test_output
+
+
+*.jpg
+*.png
+# *.txt
+
+# compilation and distribution
+__pycache__
+_ext
+*.pyc
+*.so
+AdelaiDet.egg-info/
+build/
+dist/
+
+# pytorch/python/numpy formats
+*.pth
+*.pkl
+*.npy
+
+# ipython/jupyter notebooks
+*.ipynb
+**/.ipynb_checkpoints/
+
+# Editor temporaries
+*.swn
+*.swo
+*.swp
+*~
+
+# Pycharm editor settings
+.idea
+# .vscode
+.python-version
+
+# project dirs
+/datasets/coco
+/datasets/lvis
+/datasets/pic
+/datasets/ytvos
+/models
+/demo_outputs
+/example_inputs
+/debug
+/weights
+/export
+eval.sh
+
+demo/performance.py
+demo/demo2.py
+train.sh
+benchmark.sh
+script
+
+# by cws.
+/dataset
+/dataspace
+/results
+/my_data
+/search_for_pair_warp_right_track
+/my_data_bdd
+my_data_for_MOSE
+my_code_for_MOSE/search_result
+my_data_for_MOSE_track_result
+my_data_for_kitti_add_optical_flow_noise
+
+my_data_for_ytvis_2019
+my_data_for_ytvis_2019_track_result
+my_data_for_ytvis_2019_kitti_pretrain
+my_data_for_ytvis_2019_kitti_pretrain_track_result
+my_code_for_ytvis_2019/val_img_filename_to_frame_id_video_id_dict.json
+my_code_for_ytvis_2019/val_video_name_to_video_id_video_length_dict.json
+
+my_code_for_ytvis_2019_kitti_pretrain/val_img_filename_to_frame_id_video_id_dict.json
+my_data_for_ytvis_2019_kitti_pretrain_track_result_vis
+
+my_code_for_track_plot/track_dict.json
+my_data_for_ytvis_2019_maskfreevis

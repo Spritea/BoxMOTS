@@ -1,0 +1,1 @@
+1.Directly test the model trained on kitti on the ytvis validation set.

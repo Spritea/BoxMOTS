@@ -1,0 +1,175 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "My Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "cwd": "${fileDirname}",
+            "justMyCode": false,
+        },
+        {
+            "name": "DeepSORT",
+            "type": "python",
+            "request": "launch",
+            "program": "strong_sort.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "4"
+            },
+            "args": [
+                "MOT17",
+                "val"
+            ]
+        },
+        {
+            "name": "DeepSORT-MyData",
+            "type": "python",
+            "request": "launch",
+            "program": "strong_sort.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "4",
+                // "QT_DEBUG_PLUGINS":"1",
+                "DISPLAY": "localhost:10.0",
+            },
+            "args": [
+                "KITTI_MOTS",
+                "val_in_trainval"
+            ]
+        },
+        {
+            "name": "DeepSORT-BDD",
+            "type": "python",
+            "request": "launch",
+            "program": "strong_sort.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "4",
+                // "QT_DEBUG_PLUGINS":"1",
+                "DISPLAY": "localhost:10.0",
+            },
+            "args": [
+                "BDD_MOTS",
+                "val_set"
+            ]
+        },
+        {
+            "name": "DeepSORT-MOSE-valid",
+            "type": "python",
+            "request": "launch",
+            "program": "strong_sort.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "4",
+                // "QT_DEBUG_PLUGINS":"1",
+                "DISPLAY": "localhost:10.0",
+            },
+            "args": [
+                "MOSE",
+                "valid",
+            ]
+        },
+        {
+            "name": "DeepSORT-MOSE-train",
+            "type": "python",
+            "request": "launch",
+            "program": "strong_sort.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "4",
+                // "QT_DEBUG_PLUGINS":"1",
+                "DISPLAY": "localhost:10.0",
+            },
+            "args": [
+                "MOSE",
+                "train",
+            ]
+        },
+        {
+            "name": "DeepSORT-ytvis-2019-valid",
+            "type": "python",
+            "request": "launch",
+            "program": "strong_sort.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+                // "QT_DEBUG_PLUGINS":"1",
+                "DISPLAY": "localhost:10.0",
+            },
+            "args": [
+                "YouTube_VIS_2019",
+                "valid",
+            ]
+        },
+        {
+            "name": "DeepSORT-ytvis-2019-multi-class-valid",
+            "type": "python",
+            "request": "launch",
+            "program": "strong_sort_multi_class_ytvis.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+                // "QT_DEBUG_PLUGINS":"1",
+                "DISPLAY": "localhost:10.0",
+            },
+            "args": [
+                "YouTube_VIS_2019",
+                "valid",
+            ]
+        },
+        {
+            "name": "DeepSORT-ytvis-2019-valid-selected",
+            "type": "python",
+            "request": "launch",
+            "program": "strong_sort.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+                // "QT_DEBUG_PLUGINS":"1",
+                "DISPLAY": "localhost:10.0",
+            },
+            "args": [
+                "YouTube_VIS_2019",
+                "valid_selected",
+            ]
+        },
+        {
+            "name": "StrongSORT++_MyData",
+            "type": "python",
+            "request": "launch",
+            "program": "strong_sort.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "4",
+                // "QT_DEBUG_PLUGINS":"1",
+                "DISPLAY": "localhost:10.0",
+            },
+            "args": [
+                "KITTI_MOTS",
+                "val_in_trainval",
+                "-ECC",
+                "--NSA",
+                "--EMA",
+                "--MC",
+                "--woC",
+                "--AFLink",
+                "--GSI"
+            ]
+        },
+    ]
+}
