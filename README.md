@@ -8,10 +8,10 @@ Main model generates detection, segmentation, and object embedding results. This
 We use [DeepSORT](https://github.com/dyhBUPT/StrongSORT) for data association, based on both motion and appearance information. This part is contained in the [StrongSORT](StrongSORT) folder. Please go to the the [README](StrongSORT/README.md) file under that folder for usage details.
 
 ## Optical Flow Model
-We use [GMA](https://github.com/zacjiang/GMA) to generate optical flow results for the KITTI MOTS and BDD100K MOTS training sets. Optical flow results are used to train the main model.
+We use the [GMA](https://github.com/zacjiang/GMA) method to generate optical flow results for the KITTI MOTS and BDD100K MOTS training sets. Optical flow results are used to train the main model. This part is contained in the [GMA](GMA) folder. Please go to the the [README](GMA/README.md) file under that folder for usage details.
 
 ## Shadow Detection Model
-We use [SSIS](https://github.com/stevewongv/SSIS) to detect the shadow and remove it from the car-like object's segmentation result. Shadow detection results are used in the inference process.
+We use the [SSIS](https://github.com/stevewongv/SSIS) method to detect the shadow and remove it from the car-like object's segmentation result. Shadow detection results are used in the inference process.
 
 ## TODO
 - [x] Repo setup.
