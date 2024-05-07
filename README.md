@@ -16,6 +16,9 @@ We use the [SSIS](https://github.com/stevewongv/SSIS) method to detect the shado
 ## TODO
 - [x] Repo setup.
 - [x] Add code of main model.
+- [x] Add code of data association.
+- [x] Add code of the optical flow model.
+- [x] Add code of the shadow detection model.
 
 ## Acknowledgements
 - Thanks [AdelaiDet](https://github.com/aim-uofa/AdelaiDet) for the BoxInst implementation.
