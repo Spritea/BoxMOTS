@@ -2,11 +2,11 @@
 Create date: 2024/03/02. Test server: tesla.
 
 ## 1. Clone this folder
-Git clone this private GitHub folder with PAT key.
+Git clone this GitHub folder.
 
-Command: `git clone https://<pat>@github.com/<your account or organization>/<repo>.git`
+Command: `git clone https://github.com/Spritea/BoxMOTS.git`
 
-Note that we need to clone my own SSIS folder, where the file `adet/layers/csrc/ml_nms/ml_nms.cu` is modified compared to the official SSIS project. Because we use `pytorch=1.8.1` with `cuda=11.1`, we have to use the old version `adet/layers/csrc/ml_nms/ml_nms.cu` file of old version `AdelaiDet` project.
+Note that we need to clone the modified SSIS folder here, where the file `adet/layers/csrc/ml_nms/ml_nms.cu` is modified compared to the official SSIS project. Because we use `pytorch=1.8.1` with `cuda=11.1`, we have to use the old version `adet/layers/csrc/ml_nms/ml_nms.cu` file of old version `AdelaiDet` project.
 
 GitHub issues of SSIS have mentioned [this](https://github.com/stevewongv/SSIS/issues/6). If we want to directly use the official SSIS project, we have to use `pytorch=1.11+`, but this pytorch version requires `cuda=11.3+`, which is not installed in the server tesla. We have installed `cuda=11.1` on the server tesla.
 

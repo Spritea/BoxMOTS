@@ -11,7 +11,7 @@ We use [DeepSORT](https://github.com/dyhBUPT/StrongSORT) for data association, b
 We use the [GMA](https://github.com/zacjiang/GMA) method to generate optical flow results for the KITTI MOTS and BDD100K MOTS training sets. Optical flow results are used to train the main model. This part is contained in the [GMA](GMA) folder. Please go to the the [README](GMA/README.md) file under that folder for usage details.
 
 ## Shadow Detection Model
-We use the [SSIS](https://github.com/stevewongv/SSIS) method to detect the shadow and remove it from the car-like object's segmentation result. Shadow detection results are used in the inference process.
+We use the [SSIS](https://github.com/stevewongv/SSIS) method to detect the shadow and remove it from the car-like object's segmentation result. Shadow detection results are used in the inference process. This part is contained in the [SSIS](SSIS) folder. Please go to the [README](SSIS/README.md) file under that folder for usage details.
 
 ## TODO
 - [x] Repo setup.
