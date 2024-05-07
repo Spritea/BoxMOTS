@@ -1,0 +1,2 @@
+# StrongSORT Usage
+This part is based on the [StrongSORT](https://github.com/dyhBUPT/StrongSORT) project. Please first check the installation steps on the StrongSORT project to build the conda environment.
