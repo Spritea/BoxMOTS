@@ -3,9 +3,9 @@ Create data: 2024/02/19. Test server: tesla.
 
 This folder does not need build. Only the environment is needed.
 ## 1. Clone this folder
-Git clone this private GitHub folder with PAT key.
+Git clone this GitHub folder.
 
-Command: `git clone https://<pat>@github.com/<your account or organization>/<repo>.git`
+Command: `git clone https://github.com/Spritea/BoxMOTS.git`
 
 ## 2. Follow the official repo [readme](https://github.com/Spritea/GMA?tab=readme-ov-file#environments) to set up the environment
 
