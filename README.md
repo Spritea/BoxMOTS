@@ -6,6 +6,25 @@ This is the official pytorch implementation for our weakly supervised MOTS work:
 - **Superior performance** than previous works. **12.4%** improvement on sMOTSA, **7.3%** improvement on MOTSA, and **8.2%** improvement on MOTSP on the KITTI MOTS dataset.
 - **Flexible modules**. Optical flow model and shadow detection model are used on-demand. They can also be replaced by more advanced optical flow/shadow detection models to achieve better performance.
 
+## Visualization Results
+BoxMOTS visualization results on KITTI MOTS, BDD100K MOTS, MOSE, and YouTube-VIS 2019 (from top to bottom). For results on MOSE and YouTube-VIS 2019, the BoxMOTS model trained on KITTI MOTS is used to directly make predictions on MOSE and YouTube-VIS 2019, without training on these two datasets.
+
+<table>
+  <tr>
+    <td><img src="vis_results/kitti_mots.gif" width="600" title="KITTI MOTS"></td>
+  </tr>
+  <tr>
+    <td><img src="vis_results/bdd100k_mots.gif" width="600" title="BDD100K MOTS"></td>
+  </tr>
+  <tr>
+    <td><img src="vis_results/MOSE.gif" width="600" title="MOSE"></td>
+  </tr>
+  <tr>
+    <td><img src="vis_results/ytvis_2019.gif" width="600" title="YouTube-VIS 2019"></td>
+  </tr>
+</table>
+
+
 ## Abstract
 Recently studies have shown the potential of weakly supervised multi-object tracking and segmentation, but the drawbacks of coarse pseudo mask label and limited utilization of temporal information remain to be unresolved. To address these issues, we present a framework that directly uses box label to supervise the segmentation network without resorting to pseudo mask label. In addition, we propose to fully exploit the temporal information from two perspectives. Firstly, we integrate optical flow-based pairwise consistency to ensure mask consistency across frames, thereby improving mask quality for segmentation. Secondly, we propose a temporally adjacent pair-based sampling strategy to adapt instance embedding learning for data association in tracking. We combine these techniques into an end-to-end deep model, named BoxMOTS, which requires only box annotation without mask supervision. Extensive experiments demonstrate that our model surpasses current state-of-the-art by a large margin, and produces promising results on KITTI MOTS and BDD100K MOTS.
 
