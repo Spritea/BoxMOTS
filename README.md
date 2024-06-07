@@ -7,7 +7,7 @@ This is the official pytorch implementation for our weakly supervised MOTS work:
 - **Flexible modules**. Optical flow model and shadow detection model are used on-demand. They can also be replaced by more advanced optical flow/shadow detection models to achieve better performance.
 
 ## Visualization Results
-BoxMOTS visualization results on KITTI MOTS, BDD100K MOTS, MOSE, and YouTube-VIS 2019 (from top to bottom). For results on MOSE and YouTube-VIS 2019, the BoxMOTS model trained on KITTI MOTS is used to directly make predictions on MOSE and YouTube-VIS 2019, without training on these two datasets.
+BoxMOTS visualization results on KITTI MOTS, BDD100K MOTS, MOSE (VOS dataset), and YouTube-VIS 2019 (VIS dataset) (from top to bottom). For results on MOSE and YouTube-VIS 2019, the BoxMOTS model trained on KITTI MOTS is used to directly make predictions on MOSE and YouTube-VIS 2019, without training on these two datasets.
 
 <table>
   <tr>
