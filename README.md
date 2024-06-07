@@ -1,5 +1,10 @@
 # BoxMOTS
-This is the official implementation for our weakly supervised MOTS work: [Towards High Quality Multi-Object Tracking and Segmentation without Mask Supervision](https://ieeexplore.ieee.org/abstract/document/10539628). This project includes four parts: main model, data association method, optical flow model, and shadow detection model.
+This is the official pytorch implementation for our weakly supervised MOTS work: [Towards High Quality Multi-Object Tracking and Segmentation without Mask Supervision](https://ieeexplore.ieee.org/abstract/document/10539628). This project includes four parts: main model, data association method, optical flow model, and shadow detection model.
+
+## Highlights
+- **Box supervised** multi-object tracking and segmentation model. Only bounding box labels are used in the training stage.
+- **Superior performance** than previous works. **12.4%** improvement on sMOTSA, **7.3%** improvement on MOTSA, and **8.2%** improvement on MOTSP on the KITTI MOTS dataset.
+- **Flexible modules**. Optical flow model and shadow detection model are used on-demand. They can also be replaced by more advanced optical flow/shadow detection models to achieve better performance.
 
 ## Abstract
 Recently studies have shown the potential of weakly supervised multi-object tracking and segmentation, but the drawbacks of coarse pseudo mask label and limited utilization of temporal information remain to be unresolved. To address these issues, we present a framework that directly uses box label to supervise the segmentation network without resorting to pseudo mask label. In addition, we propose to fully exploit the temporal information from two perspectives. Firstly, we integrate optical flow-based pairwise consistency to ensure mask consistency across frames, thereby improving mask quality for segmentation. Secondly, we propose a temporally adjacent pair-based sampling strategy to adapt instance embedding learning for data association in tracking. We combine these techniques into an end-to-end deep model, named BoxMOTS, which requires only box annotation without mask supervision. Extensive experiments demonstrate that our model surpasses current state-of-the-art by a large margin, and produces promising results on KITTI MOTS and BDD100K MOTS.
@@ -23,12 +28,6 @@ We use the [SSIS](https://github.com/stevewongv/SSIS) method to detect the shado
 - [x] Add code of the optical flow model.
 - [x] Add code of the shadow detection model.
 
-## Acknowledgements
-- Thanks [AdelaiDet](https://github.com/aim-uofa/AdelaiDet) for the BoxInst implementation.
-- Thanks [StrongSORT](https://github.com/dyhBUPT/StrongSORT) for the DeepSORT implementation.
-- Thanks [GMA](https://github.com/zacjiang/GMA) for the optical flow model.
-- Thanks [SSIS](https://github.com/stevewongv/SSIS) for the shadow detection model.
-
 ## Citation 
 If you find this project helpful, feel free to cite our work.
 ```
@@ -40,3 +39,9 @@ If you find this project helpful, feel free to cite our work.
   publisher={IEEE}
 }
 ```
+
+## Acknowledgements
+- Thanks [AdelaiDet](https://github.com/aim-uofa/AdelaiDet) for the BoxInst implementation.
+- Thanks [StrongSORT](https://github.com/dyhBUPT/StrongSORT) for the DeepSORT implementation.
+- Thanks [GMA](https://github.com/zacjiang/GMA) for the optical flow model.
+- Thanks [SSIS](https://github.com/stevewongv/SSIS) for the shadow detection model.
