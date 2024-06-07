@@ -20,7 +20,7 @@ BoxMOTS visualization results on KITTI MOTS, BDD100K MOTS, MOSE, and YouTube-VIS
     <td><img src="vis_results/MOSE.gif" width="600" title="MOSE"></td>
   </tr>
   <tr>
-    <td><img src="vis_results/ytvis_2019.gif" width="600" title="YouTube-VIS 2019"></td>
+    <td><img src="vis_results/ytvis_2019_reduce_size.gif" width="600" title="YouTube-VIS 2019"></td>
   </tr>
 </table>
 
