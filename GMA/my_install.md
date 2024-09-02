@@ -7,7 +7,7 @@ Git clone this GitHub folder.
 
 Command: `git clone https://github.com/Spritea/BoxMOTS.git`
 
-## 2. Follow the official repo [readme](https://github.com/Spritea/GMA?tab=readme-ov-file#environments) to set up the environment
+## 2. Follow the official repo [readme](https://github.com/zacjiang/GMA) to set up the environment
 
 ### 2.1 Create a conda env
 Command: `conda create -n myenv python=3.8`
