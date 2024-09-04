@@ -83,5 +83,7 @@ Please use the [my_script_kitti](my_script_kitti.sh) script to train the model o
 ## Inference
 Note that we perform evaluation on the validation set in the training process, and we save both segmentation and embedding results for each evaluation. Hence you can directly use these results as the inference outputs for the model, which is trained by a specific number of iterations, without the need to perform the inference process explicitly.
 
+If you want to do inference only with pretrained model, check this [demo](demo_for_ytvis_2019/my_demo_multi_seq_ytvis_kitti_pretrain.py) on YouTube-VIS 2019 for reference.
+
 ## Notes
 - Recommended project organization: 4 conda environments for the 4 components (BoxMOTS, GMA, SSIS, StrongSORT) to avoid package conflicts.
