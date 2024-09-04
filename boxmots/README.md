@@ -4,10 +4,68 @@
 - Download: Go to the official [homepage](https://www.vision.rwth-aachen.de/page/mots) to download the images and labels, and check the [label format](https://www.vision.rwth-aachen.de/page/mots#:~:text=code%20on%20github-,Annotation%20Format,-We%20provide%20two).
 - Convert format: Use the code mentioned in the [issue](https://github.com/VisualComputingInstitute/TrackR-CNN/issues/60) to convert the label to the COCO format.
 - Evaluation: Use the [MOTS Tools](https://github.com/VisualComputingInstitute/mots_tools) to evaluate the MOTS performance.
+
+<details>
+<summary>KITTI MOTS Dataset structure sample.</summary>
+  
+```
+├── KITTI_MOTS
+│   ├── annotations
+│       ├── train_in_trainval_gt_as_coco_instances.json
+|       ├── val_in_trainval_gt_as_coco_instances.json
+│   ├── imgs
+│       ├── train_in_trainval
+│           ├── 0000
+|               ├── 000000.png
+|               ├── 000001.png
+|               ├── ...
+|               ├── 000153.png
+│           ├── 0001
+│           ├── 0003
+│           ├── ...
+│           ├── 0020
+│       ├── val_in_trainval
+│           ├── 0002
+│           ├── 0006
+│           ├── 0007
+│           ├── ...
+│           ├── 0018
+```
+
+</details>
+
 ### BDD100K MOTS
 - Download: Go to the BDD100K official [homepage](https://doc.bdd100k.com/download.html) to download MOTS [images](https://doc.bdd100k.com/download.html#mots-2020-images) and [labels](https://doc.bdd100k.com/download.html#mots-2020-labels), and check the [label format](https://doc.bdd100k.com/download.html#mots-2020-labels:~:text=2020%20The%20bitmask%20format%20is%20explained%20at%3A-,Instance%20Segmentation%20Format,-.).
 - Convert format: It is already in COCO label format.
 - Evaluation: Check this [page](https://doc.bdd100k.com/evaluate.html#multi-object-tracking-and-segmentation-segmentation-tracking) to see how to evaluate the MOTS performance on this dataset.
+
+<details>
+<summary>BDD100K MOTS Dataset structure sample.</summary>
+  
+```
+├── bdd100k
+│   ├── images
+│       ├── seg_track_20
+│           ├── train
+│               ├── 000d4f89-3bcbe37a
+│                   ├── 000d4f89-3bcbe37a-0000001.jpg
+│                   ├── ...
+│               ├── 000d35d3-41990aa4
+│               ├── ...
+│           ├── val
+│   ├── labels
+│       ├── seg_track_20
+│           ├── bitmasks
+|           ├── colormaps
+│           ├── from_rles
+│               ├── train_seg_track.json
+|               ├── val_seg_track.json
+|           ├── polygons
+│           ├── rles
+
+```
+
+</details>
 
 ## Pipeline
 1. Run [GMA](https://github.com/Spritea/BoxMOTS/tree/main/GMA) to extract the optical flow information of KITTI/BDD.
