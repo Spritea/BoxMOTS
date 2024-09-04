@@ -95,8 +95,7 @@ def get_one_flow(file_name, ori_img_h, ori_img_w):
         # [1,2,H,W]->[H,W,2]
         flow_data_one = np.transpose(np.squeeze(
             flow_data_one, axis=0), axes=(1, 2, 0))
-        # FIXME: np.resize use repeat, may do harm,
-        # but for now don't know how to upsample coordinates.
+        # np.resize use repeat, may try other ways.
         flow_data_one = np.resize(np.ascontiguousarray(
             flow_data_one), (ori_img_h, ori_img_w, 2))
     return flow_data_one
@@ -123,8 +122,7 @@ def get_one_flow_inverse(file_name, ori_img_h, ori_img_w):
         # [1,2,H,W]->[H,W,2]
         flow_data_one = np.transpose(np.squeeze(
             flow_data_one, axis=0), axes=(1, 2, 0))
-        # FIXME: np.resize use repeat, may do harm,
-        # but for now don't know how to upsample coordinates.
+        # np.resize use repeat, may try other ways.
         flow_data_one = np.resize(np.ascontiguousarray(
             flow_data_one), (ori_img_h, ori_img_w, 2))
     return flow_data_one
@@ -150,8 +148,7 @@ def get_one_flow_gauss_noise(file_name, ori_img_h, ori_img_w, flow_noise_std):
         # [1,2,H,W]->[H,W,2]
         flow_data_one = np.transpose(np.squeeze(
             flow_data_one, axis=0), axes=(1, 2, 0))
-        # FIXME: np.resize use repeat, may do harm,
-        # but for now don't know how to upsample coordinates.
+        # np.resize use repeat, may try other ways.
         flow_data_one = np.resize(np.ascontiguousarray(
             flow_data_one), (ori_img_h, ori_img_w, 2))
     return flow_data_one
@@ -177,8 +174,7 @@ def get_one_flow_constant_noise(file_name, ori_img_h, ori_img_w, constant_noise_
         # [1,2,H,W]->[H,W,2]
         flow_data_one = np.transpose(np.squeeze(
             flow_data_one, axis=0), axes=(1, 2, 0))
-        # FIXME: np.resize use repeat, may do harm,
-        # but for now don't know how to upsample coordinates.
+        # np.resize use repeat, may try other ways.
         flow_data_one = np.resize(np.ascontiguousarray(
             flow_data_one), (ori_img_h, ori_img_w, 2))
     return flow_data_one
@@ -207,8 +203,7 @@ def get_bdd_one_flow(file_name, ori_img_h, ori_img_w):
         # [1,2,H,W]->[H,W,2]
         flow_data_one = np.transpose(np.squeeze(
             flow_data_one, axis=0), axes=(1, 2, 0))
-        # FIXME: np.resize use repeat, may do harm,
-        # but for now don't know how to upsample coordinates.
+        # np.resize use repeat, may try other ways.
         flow_data_one = np.resize(np.ascontiguousarray(
             flow_data_one), (ori_img_h, ori_img_w, 2))
     return flow_data_one
@@ -250,8 +245,7 @@ def get_ytvis_2019_one_flow(file_name, ori_img_h, ori_img_w):
         # [1,2,H,W]->[H,W,2]
         flow_data_one = np.transpose(np.squeeze(
             flow_data_one, axis=0), axes=(1, 2, 0))
-        # FIXME: np.resize use repeat, may do harm,
-        # but for now don't know how to upsample coordinates.
+        # np.resize use repeat, may try other ways.
         flow_data_one = np.resize(np.ascontiguousarray(
             flow_data_one), (ori_img_h, ori_img_w, 2))
     return flow_data_one
