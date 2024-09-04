@@ -13,7 +13,7 @@
 1. Run [GMA](https://github.com/Spritea/BoxMOTS/tree/main/GMA) to extract the optical flow information of KITTI/BDD.
 2. Train the BoxMOTS model with the [boxmots](.) folder.
 3. Run [SSIS](https://github.com/Spritea/BoxMOTS/tree/main/SSIS) to get the shadow detectin results of KITTI/BDD.
-4. Use the shadow detection result to refine the model's segmentation result with code in [this folder](my_code/for_shadow).
+4. Combine the shadow detection result to refine the model's segmentation result. [This code](https://github.com/Spritea/BoxMOTS/blob/main/boxmots/my_code/for_shadow/combine_shadow.py) for KITTI, and [this code](https://github.com/Spritea/BoxMOTS/blob/main/boxmots/my_code/for_shadow/combine_shadow_bdd_by_class.py) for BDD.
 5. Run [StrongSORT](https://github.com/Spritea/BoxMOTS/tree/main/StrongSORT) for the data association. This step generates mask-based trajectories, which is the final output of the MOTS task.
 
 ## Installation
