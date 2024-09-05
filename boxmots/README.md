@@ -69,7 +69,7 @@
 
 ## Pipeline
 1. Run [GMA](https://github.com/Spritea/BoxMOTS/tree/main/GMA) to extract the optical flow information of KITTI/BDD.
-2. Train the BoxMOTS model with the [boxmots](.) folder.
+2. Train the BoxMOTS model with the [boxmots](.) folder. Check [Training](page) for details.
 3. Run [SSIS](https://github.com/Spritea/BoxMOTS/tree/main/SSIS) to get the shadow detectin results of KITTI/BDD.
 4. Combine the shadow detection result to refine the model's segmentation result. [This code](https://github.com/Spritea/BoxMOTS/blob/main/boxmots/my_code/for_shadow/combine_shadow.py) for KITTI, and [this code](https://github.com/Spritea/BoxMOTS/blob/main/boxmots/my_code/for_shadow/combine_shadow_bdd_by_class.py) for BDD.
 5. Run [StrongSORT](https://github.com/Spritea/BoxMOTS/tree/main/StrongSORT) for the data association. This step generates mask-based trajectories, which is the final output of the MOTS task.
@@ -78,7 +78,16 @@
 Please check the [my_install](my_install.md) doc for installation details of the BoxMOTS part.
 
 ## Training
-Please use the [my_script_kitti](my_script_kitti.sh) script to train the model on KITTI MOTS. Use the [my_script_bdd](my_script_bdd.sh) script to train the model on BDD100K MOTS. Make sure you have obtained the optical flow information with [GMA](https://github.com/Spritea/BoxMOTS/tree/main/GMA) before training.
+1. **Optical flow data**. Make sure you have obtained the optical flow information of the dataset with [GMA](https://github.com/Spritea/BoxMOTS/tree/main/GMA) before training.
+   
+2. **BoxInst weights**. BoxMOTS uses BoxInst for instance segmentation. Check its official [page](https://github.com/aim-uofa/AdelaiDet/blob/master/configs/BoxInst/README.md) to download the `BoxInst_MS_R_50_3x.pth` model weights. It will be loaded to initialize BoxMOTS when the training starts.
+
+3. **KITTI MOTS**. Please use the [my_script_kitti](my_script_kitti.sh) script, and change the config file in the script to this [config](configs/BoxInst_ReID_One_Class_Infer_Pair_Warp_ReID_Eval_In_Train/MS_R_50_1x_kitti_mots_coco_pretrain_strong_long_epoch_seq_shuffle_fl_2_lr_0_0001_bs_4_eval_500_steps_4k.yaml) to train the full model (using optical flow information) on KITTI MOTS.
+You can also train a base model without using optical flow with the [base](configs/BoxInst_ReID_One_Class_Infer_Right_Track/MS_R_50_1x_kitti_mots_coco_pretrain_strong_long_epoch_seq_shuffle_fl_2_lr_0_0001_bs_4_eval_500_steps_4k.yaml) config first, and then train the full model with the base model weights as initialization by modifying the `WEIGHTS` part in the [config](configs/BoxInst_ReID_One_Class_Infer_Pair_Warp_ReID_Eval_In_Train/MS_R_50_1x_kitti_mots_coco_pretrain_strong_long_epoch_seq_shuffle_fl_2_lr_0_0001_bs_4_eval_500_steps_4k.yaml). You may also need to adjust other hyper-parameters, like loss weights, learning rate decay steps, and so on. This may give you more stable training process and (probably) a little better performance.
+
+4. **BDD100K MOTS**. Use the [my_script_bdd](my_script_bdd.sh) script, and change the config file in the script to this [config](configs/BDD_DATA/BoxInst_ReID_One_Class_Infer_BDD_Pair_Warp_ReID_Eval_In_Train/MS_R_50_1x_bdd_mots_coco_pretrain_strong_iter_21k_seq_shuffle_fl_2_lr_0_001_bs_4_eval_500_no_color_sim.yaml) to train the full model (using optical flow information) on BDD100K MOTS. 
+
+5. **BoxMOTS weights**. The trained BoxMOTS models are provided [here](https://github.com/Spritea/BoxMOTS/releases/tag/v0.1): the [model](https://github.com/Spritea/BoxMOTS/releases/download/v0.1/model_kitti_use_optical_flow.pth) trained on KITTI, and the [model](https://github.com/Spritea/BoxMOTS/releases/download/v0.1/model_bdd_use_optical_flow.pth) trained on BDD.
 
 ## Inference
 Note that we perform evaluation on the validation set in the training process, and we save both segmentation and embedding results for each evaluation. Hence you can directly use these results as the inference outputs for the model, which is trained by a specific number of iterations, without the need to perform the inference process explicitly.
