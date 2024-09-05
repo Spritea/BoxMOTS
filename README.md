@@ -46,7 +46,8 @@ We use the [SSIS](https://github.com/stevewongv/SSIS) method to detect the shado
 - [x] Add code of data association.
 - [x] Add code of the optical flow model.
 - [x] Add code of the shadow detection model.
-- [ ] Complete the full pipeline.
+- [x] Complete the full pipeline.
+- [x] Upload COCO-format dataset labels and trained model weights.
 
 ## Citation 
 If you find this project helpful, feel free to cite our work.
