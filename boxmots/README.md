@@ -36,8 +36,8 @@
 
 ### BDD100K MOTS
 - Download: Go to the BDD100K official [homepage](https://doc.bdd100k.com/download.html) to download MOTS [images](https://doc.bdd100k.com/download.html#mots-2020-images) and [labels](https://doc.bdd100k.com/download.html#mots-2020-labels), and check the [label format](https://doc.bdd100k.com/download.html#mots-2020-labels:~:text=2020%20The%20bitmask%20format%20is%20explained%20at%3A-,Instance%20Segmentation%20Format,-.).
-- Dataset toolkit: Download the official dataset [toolkit](https://github.com/bdd100k/bdd100k) with commit `b7e1781` for data format convertion and result evaluation. Install `scalabel=0.3.0` required by the toolkit. Check this [file](https://github.com/Spritea/BoxMOTS/blob/main/bdd_toolkit_patch/README.md) for patch.
-- Convert format: It is already in COCO label format. The label after convertion is provided [here](https://github.com/Spritea/BoxMOTS/releases/download/v0.1/from_rles.zip).
+- Dataset toolkit and modification: Check this [description](https://github.com/Spritea/BoxMOTS/blob/main/bdd_toolkit_patch/README.md) for official BDD toolkit download and modification.
+- Convert format: Check this [page](https://doc.bdd100k.com/format.html#to-coco) to see how to convert the labels to the COCO label format. The label after convertion with modified toolkit is provided [here](https://github.com/Spritea/BoxMOTS/releases/download/v0.1/from_rles.zip).
 - Evaluation: Check this [page](https://doc.bdd100k.com/evaluate.html#multi-object-tracking-and-segmentation-segmentation-tracking) to see how to evaluate the MOTS performance on this dataset.
 
 <details>
