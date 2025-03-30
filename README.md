@@ -1,5 +1,11 @@
 # BoxMOTS
-This is the official pytorch implementation for our weakly supervised MOTS work: [Towards High Quality Multi-Object Tracking and Segmentation without Mask Supervision](https://ieeexplore.ieee.org/abstract/document/10539628). This project includes four parts: main model, data association method, optical flow model, and shadow detection model.
+This is the official pytorch implementation for our weakly supervised MOTS work.
+>**Toward High Quality Multi-Object Tracking and Segmentation Without Mask Supervision** <br/>
+Wensheng Cheng, Yi Wu, Zhenyu Wu, Haibin Ling, Gang Hua <br/>
+**IEEE Transactions on Image Processing, 2024** <br/>
+**[[IEEE Xplore Paper](https://ieeexplore.ieee.org/abstract/document/10539628)]**
+
+This project includes four parts: main model, data association method, optical flow model, and shadow detection model.
 
 ## Highlights
 - **Box supervised** multi-object tracking and segmentation model. Only bounding box labels are used in the training stage.
